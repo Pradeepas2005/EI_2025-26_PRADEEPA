@@ -1,4 +1,4 @@
-class FormState {
+public class FormState {
     private final String name;
     private final String email;
     private final String address;
