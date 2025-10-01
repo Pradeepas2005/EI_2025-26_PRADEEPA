@@ -1,44 +1,40 @@
-Company Hierarchy 
-Overview
+# Company Hierarchy Project – Composite Pattern
 
-This project demonstrates the Composite Design Pattern in Java.
-The Composite Pattern allows you to treat individual objects and compositions of objects uniformly, making it ideal for tree-like structures.
+## Use Case
+This console-based application demonstrates the **Composite Design Pattern** in Java.  
+The application simulates a **company hierarchy**, where employees can be individual developers or managers with subordinates. Users can view the organization structure as a tree-like hierarchy.
 
-In this project, we implement a company hierarchy where employees have Name and ID and can be individual developers (Leaf) or managers with subordinates (Composite).
+---
 
-Features
+## Design Pattern
+The application uses the **Composite Design Pattern**.  
+This pattern allows treating **individual objects (Leaf)** and **compositions of objects (Composite)** uniformly, which is ideal for representing tree-like structures such as company hierarchies.
 
-Represents company hierarchy using the Composite pattern.
+---
 
-Each employee has a Name and ID.
+## How it Relates to the Use Case
+- **Employee (Component):** Interface defining `showDetails()` method for all employees.  
+- **Developer (Leaf):** Represents individual employees with Name and ID.  
+- **Manager (Composite):** Represents managers who can have multiple subordinates, including other managers.  
+- **Main (Client):** Demonstrates creating employees, adding them to managers, and displaying the hierarchy.
 
-Allows managers to have multiple subordinates, including other managers.
+---
 
-Demonstrates that both individual employees and managers can be treated uniformly.
+## Classes
+- **Employee:** Interface with `showDetails()` method.  
+- **Developer:** Leaf class representing an individual employee.  
+- **Manager:** Composite class representing a manager with subordinates.  
+- **Main:** Client class demonstrating the Composite pattern with a company hierarchy.
 
-Provides a clear tree-like display of the organization structure.
+---
 
-Structure
+## How to Run
+1. **Navigate to the project folder**: `CompanyHierarchy`  
+2. **Compile all the files**:    javac *.java
+3.  **Run the Main class**:     java SatelliteCLI
 
-Employee: Interface defining showDetails() method.
+## Output
 
-Developer: Leaf class representing individual employees with ID and Name.
-
-Manager: Composite class representing managers with subordinates.
-
-Main: Client class that demonstrates creating and displaying the company hierarchy.
-
-How to Run
-
-Ensure you have Java installed on your machine.
-
-Open terminal in the project folder (the src folder if following structure below).
-
-Compile the Java files:
-
-javac *.java
+<img width="362" height="123" alt="image" src="https://github.com/user-attachments/assets/9d6d58a4-1186-4171-ae4b-da7fbc46a3ee" />
 
 
-Run the Main class:
-
-java Main
