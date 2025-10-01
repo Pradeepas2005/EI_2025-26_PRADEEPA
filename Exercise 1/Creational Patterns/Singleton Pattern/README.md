@@ -1,33 +1,37 @@
-**Singleton Pattern Project
-Overview
-**
-This project demonstrates the Singleton Design Pattern in Java.
-The Singleton Pattern ensures that a class has only one instance and provides a global point of access to it.
+# Singleton Pattern Project – Printer Spooler
 
-In this project, we implement a Printer Spooler as a real-world example of a Singleton.
+## Use Case
+This console-based application demonstrates the **Singleton Design Pattern** in Java.  
+The application simulates a **Printer Spooler**, ensuring that only one instance of the printer spooler exists and all document printing requests are handled through that single instance.
 
-Features
+---
 
-Ensures only one instance of PrinterSpooler is created.
+## Design Pattern
+The application uses the **Singleton Design Pattern**.  
+This pattern ensures that a class has only one instance and provides a **global point of access** to that instance.  
 
-Thread-safe access using synchronized getInstance() method.
+---
 
-Demonstrates usage with a main application that prints documents.
+## How it Relates to the Use Case
+- **PrinterSpooler (Singleton):** Ensures only one instance of the printer spooler exists and provides a method to print documents.  
+- **Main (Client):** Demonstrates usage of the PrinterSpooler singleton and shows that all references point to the same object.
 
-Shows that all references point to the same object.
+---
 
-Structure
+## Classes
+- **PrinterSpooler:** Implements the singleton pattern with a thread-safe `getInstance()` method and a `printDocument()` method.  
+- **Main:** Client class that simulates printing multiple documents using the PrinterSpooler singleton.
 
-PrinterSpooler: A class that follows the Singleton pattern to ensure only one instance of the printer spooler exists. It provides a printDocument method to print documents.
+---
 
-Main: A client class that demonstrates the use of the PrinterSpooler singleton.
+## How to Run
+1. **Navigate to the project folder**: `PrinterSpooler`  
+2. **Compile all the files**:    javac *.java
+3.  **Run the Main class**:      java Main
 
-How to Run
+---
 
-Ensure you have Java installed on your machine.
 
-Open terminal in the project folder (src folder if following structure below).
+## Output
 
-Compile the Java files: javac *.java
-
-Run the Main class: java Main
+<img width="402" height="103" alt="image" src="https://github.com/user-attachments/assets/ac53c335-f082-4d69-b122-153cfe167b96" />
