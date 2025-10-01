@@ -1,6 +1,6 @@
-Singleton Pattern Project
+**Singleton Pattern Project
 Overview
-
+**
 This project demonstrates the Singleton Design Pattern in Java.
 The Singleton Pattern ensures that a class has only one instance and provides a global point of access to it.
 
