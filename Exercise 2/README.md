@@ -1,103 +1,54 @@
-Satellite Command System
-Use Case Overview
+# Satellite Command System
 
-The Satellite Command System is a console-based application that simulates controlling a satellite in orbit. It allows users to send commands to the satellite to manage its orientation, solar panel status, and data collection. The system ensures sequential execution of commands while maintaining the satellite's state accurately.
+## Use Case
+This console-based application simulates controlling a **satellite in orbit**.  
+Users can send commands to manage the satellite's orientation, solar panel status, and data collection.  
+The system ensures sequential execution of commands while maintaining the satellite's state accurately.
 
-Functionalities
+---
 
-Rotate Satellite: Change the satellite's orientation (North, South, East, West).
+## Functionalities
+- **Rotate Satellite:** Change orientation (North, South, East, West)  
+- **Activate/Deactivate Solar Panels:** Control energy availability  
+- **Collect Data:** Gather data from the satellite (requires solar panels to be active)  
+- **Check Status:** View orientation, solar panel status, and total data collected  
+- **Command Execution:** Execute a series of commands via a command-line interface  
 
-Activate/Deactivate Solar Panels: Turn solar panels on or off to control energy availability.
+---
 
-Collect Data: Gather data from the satellite, which can only be done when solar panels are active.
+## Design Patterns Used
 
-Check Status: View the current orientation, solar panel status, and total data collected.
+### Command Pattern
+- **Purpose:** Encapsulates requests as objects, allowing them to be executed, queued, or logged independently of the client.  
+- **Relation to Use Case:** Each satellite action (rotate, activate panels, deactivate panels, collect data) is a command object.  
+- **Classes Involved:** `Command` (interface), `RotateCommand`, `ActivatePanelsCommand`, `DeactivatePanelsCommand`, `CollectDataCommand`, `CommandExecutor` (Invoker)
 
-Command Execution: Execute a series of commands through a command-line interface.
+### Singleton Pattern
+- **Purpose:** Ensures only one instance of the satellite exists.  
+- **Relation to Use Case:** Guarantees all commands operate on the same satellite instance.  
+- **Classes Involved:** `Satellite`
 
-🧩 Design Patterns Used
+### Factory Method Pattern
+- **Purpose:** Dynamically creates command objects based on user input.  
+- **Relation to Use Case:** Simplifies creation of commands like rotate, activate, deactivate, and collect.  
+- **Classes Involved:** `CommandFactory`
 
-Command Pattern
+---
 
-Purpose: Encapsulates requests as objects, allowing them to be executed, queued, or logged independently of the client that invokes them.
+## Classes and Their Responsibilities
+- **Satellite.java:** Singleton class representing the satellite; manages orientation, solar panels, and data collection  
+- **Command.java:** Interface for command execution  
+- **RotateCommand.java:** Rotates the satellite in a given direction  
+- **ActivatePanelsCommand.java:** Activates solar panels  
+- **DeactivatePanelsCommand.java:** Deactivates solar panels  
+- **CollectDataCommand.java:** Collects data from the satellite  
+- **CommandExecutor.java:** Invoker that executes commands and handles exceptions  
+- **CommandFactory.java:** Factory class that creates commands based on user input  
+- **SatelliteCLI.java:** Entry point for user interaction; provides command-line interface  
 
-Relation to Use Case: Each satellite action (rotate, activate panels, deactivate panels, collect data) is encapsulated as a command object.
+---
 
-Classes Involved:
-
-Command (interface)
-
-RotateCommand, ActivatePanelsCommand, DeactivatePanelsCommand, CollectDataCommand
-
-CommandExecutor (Invoker)
-
-Singleton Pattern
-
-Purpose: Ensures only one instance of the satellite exists.
-
-Relation to Use Case: Guarantees that all commands operate on the same satellite instance.
-
-Classes Involved:
-
-Satellite
-
-Factory Method Pattern
-
-Purpose: Dynamically creates command objects based on user input.
-
-Relation to Use Case: Simplifies the creation of commands like rotate, activate, deactivate, and collect.
-
-Classes Involved:
-
-CommandFactory
-
-🗂️ Classes and Their Responsibilities
-
-Satellite.java: Singleton class representing the satellite. Manages orientation, solar panels, and data collection.
-
-Command.java: Interface for command execution.
-
-RotateCommand.java: Concrete command to rotate the satellite in a given direction.
-
-ActivatePanelsCommand.java: Concrete command to activate solar panels.
-
-DeactivatePanelsCommand.java: Concrete command to deactivate solar panels.
-
-CollectDataCommand.java: Concrete command to collect data from the satellite.
-
-CommandExecutor.java: Invoker class that executes commands and handles exceptions.
-
-CommandFactory.java: Factory class to create commands based on user input.
-
-SatelliteCLI.java: Entry point for user interaction, providing a command-line interface to issue commands.
-
-🛠️ Compiling and Executing
-
-To compile the Java source files, navigate to the src directory and use the following command:
-
-javac -d ../out com/satellite/*.java
-
-
-To run the application, use the following command:
-
-java -cp ../out com.satellite.SatelliteCLI
-
-🛠️ Tech Stack
-
-Programming Language: Java – for object-oriented design, maintainability, and use of design patterns.
-
-JDK Version: JDK 17 – provides a stable environment with the latest features.
-
-Build and Execution:
-
-javac – Compiles source code
-
-java – Runs the compiled bytecode
-
-Version Control: Git – for tracking changes and code management.
-
-📞 Contact Information
-
-Gmail: pradeepas@example.com
-
-GitHub: YourGitHubUsername
+## How to Run
+1. **Navigate to the project folder**: `src\com\Satellite`  
+2. **Compile all the files**:   javac *.java
+3.  **Run the Main class**: java SatelliteCLI
