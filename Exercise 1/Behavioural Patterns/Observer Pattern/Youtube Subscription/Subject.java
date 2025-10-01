@@ -1,0 +1,9 @@
+import java.util.List;
+
+interface Subject {
+    void subscribe(Observer o);
+
+    void unsubscribe(Observer o);
+
+    void notifySubscribers(String message);
+}
