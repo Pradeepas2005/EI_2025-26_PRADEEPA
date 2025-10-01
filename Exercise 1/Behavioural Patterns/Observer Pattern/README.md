@@ -38,4 +38,4 @@ This pattern establishes a **one-to-many relationship** between a subject and it
 
 ## Sample output
 
-<img width="1011" height="432" alt="image" src="https://github.com/user-attachments/assets/94d5677c-763f-41e0-8c23-5f8292472c10" />
+<img width="800" height="432" alt="image" src="https://github.com/user-attachments/assets/94d5677c-763f-41e0-8c23-5f8292472c10" />
