@@ -31,7 +31,7 @@ This pattern allows treating **individual objects (Leaf)** and **compositions of
 ## How to Run
 1. **Navigate to the project folder**: `CompanyHierarchy`  
 2. **Compile all the files**:    javac *.java
-3.  **Run the Main class**:     java SatelliteCLI
+3.  **Run the Main class**:     java Main
 
 ## Output
 
