@@ -1,4 +1,4 @@
-class Form {
+public class Form {
     private String name = "";
     private String email = "";
     private String address = "";
@@ -27,8 +27,10 @@ class Form {
     }
 
     public void restore(FormState state) {
-        this.name = state.getName();
-        this.email = state.getEmail();
-        this.address = state.getAddress();
+        if (state != null) {
+            this.name = state.getName();
+            this.email = state.getEmail();
+            this.address = state.getAddress();
+        }
     }
 }
