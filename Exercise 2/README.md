@@ -52,3 +52,40 @@ The system ensures sequential execution of commands while maintaining the satell
 1. **Navigate to the project folder**: `src\com\Satellite`  
 2. **Compile all the files**:   javac *.java
 3.  **Run the Main class**: java SatelliteCLI
+
+---
+
+## Output
+
+### Orientation rotate(West) would set the orientation to "West"
+<img width="825" height="103" alt="image" src="https://github.com/user-attachments/assets/926a67af-7f47-4c2c-a2ac-6a09808c8449" />
+
+
+### Activate Panels
+<img width="949" height="111" alt="image" src="https://github.com/user-attachments/assets/1b7b8065-c5a1-4d86-96e0-04ad8e15fb1a" />
+
+
+### Deactivate Panels
+<img width="975" height="119" alt="image" src="https://github.com/user-attachments/assets/a39659b3-aea2-4635-aa97-2d5920b7b73a" />
+
+
+### Collect Data
+
+while panels are active
+<img width="843" height="113" alt="image" src="https://github.com/user-attachments/assets/20233bb9-cbb9-43ab-b129-0e32b67b749e" />
+
+while panels are inactive->cannot collect when panels are inactive
+<img width="889" height="117" alt="image" src="https://github.com/user-attachments/assets/31d651ed-d474-4d60-b5cc-b9ae207be79f" />
+
+
+### Status is used to display details about orientation,panels(active/inactive) and collected data
+<img width="952" height="423" alt="image" src="https://github.com/user-attachments/assets/1655eaa4-e0c7-485b-b396-d63d57cdfd3a" />
+
+
+### Exit
+<img width="924" height="108" alt="image" src="https://github.com/user-attachments/assets/31a518d2-e317-453a-b9d6-5c628da6f99e" />
+
+
+
+## Contact :
+For any questions or suggestions, please contact me at [pradeeparathika@gmail.com].
