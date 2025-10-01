@@ -85,7 +85,7 @@ while panels are inactive->cannot collect when panels are inactive
 
 ### Status is used to display details about orientation,panels(active/inactive) and collected data
 
-<img width="700" height="103" alt="image" src="https://github.com/user-attachments/assets/1655eaa4-e0c7-485b-b396-d63d57cdfd3a" />
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/1655eaa4-e0c7-485b-b396-d63d57cdfd3a" />
 
 
 ### Exit
